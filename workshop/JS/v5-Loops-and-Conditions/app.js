@@ -29,6 +29,13 @@ list : [
 // DISPLAY TOODOS 
 displayTodos:function ( ) {
 
+console.log(this.list.length);
+
+    if(this.list.length == 0){
+        console.log("Inside the condition")
+    console.log( "You don't have any todos, add some!");
+    }
+
     this.list.forEach(function(item){
         let completedstr = (item.completed) ? "(x)" : "( )";
         console.log(completedstr, item.text);
@@ -64,15 +71,13 @@ deleteTodo:function (index){
 
 //TOGGLE COMPLETED
 toggleTodo: function(index){
-    let currentStatus = this.list[index].completed; //true
-    this.list[index].completed = ! currentStatus;
-    this.displayTodos();
-}
+},
+
 
 
 };//END OBJECTS TODOS
 
-todos.displayTodos()
+ todos.displayTodos();
 
 // console.log(todos.list);
 // todos.addTodo("new to do ")
