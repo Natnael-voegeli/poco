@@ -17,9 +17,10 @@ function bob($birthYear) {
 
 $age = 2019 - $birthYear;
 
-return "Bob is "  . $age;
+return "Bob is" . $age;
 
-    return "BOB !!!";
 }
-echo bob(1995); 
+?>
 
+
+<h1><?php echo bob(1995); ?></h1>

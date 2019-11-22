@@ -1,11 +1,12 @@
-<?php 
-include("app.php")
+<?php
+  include("app.php");
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
-  <title><?php pages($page, 'head') ?></title>
+  <title><?php echo pages('index', 'head'); ?></title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="How to use PHP to create a dynamic website">
@@ -20,8 +21,6 @@ include("app.php")
 
 <body>
 
-
-
   <!-- HEADER -->
   <header class="header">
 
@@ -33,7 +32,7 @@ include("app.php")
     <!-- Nav -->
     <nav class="nav">
       <ul class="menu">
-      <?php pages('page','menus'); ?>
+        <?php pages($page, 'menus'); ?>
       </ul>
     </nav>
 
@@ -42,14 +41,13 @@ include("app.php")
 
   <!-- CONTENT -->
   <main class="content">
-<?php include("html/$page.html"); ?>
-
+    <?php include("html/$page.html"); ?>
   </main>
 
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>&copy;1998 -  <?php echo('Y'); ?>  Heavy Metal Company</p>
+    <p>&copy;1998 - <?php echo date('Y'); ?> - Heavy Metal Company</p>
   </footer>
 
 </body>
