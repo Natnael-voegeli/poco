@@ -3,7 +3,7 @@
 $page = 'index';
 
 //GET the key from URL if is set.
-if( isset($_GET['page']) ) {
+if(isset($_GET['page']) ) {
   $page = $_GET['page'];
 }
 
